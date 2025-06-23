@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 import type { ComponentConfig } from "@/types/contentful"
-import type { DragDropState } from "@/types/redux"
+import { SimpleDragDropState } from "@/types/redux"
 
 const initialComponents: ComponentConfig[] = [
   {
@@ -75,7 +75,7 @@ const initialComponents: ComponentConfig[] = [
   },
 ]
 
-const initialState: DragDropState = {
+const initialState: SimpleDragDropState = {
   components: [],
   availableComponents: initialComponents,
   isDragging: false,
