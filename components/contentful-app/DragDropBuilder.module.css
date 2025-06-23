@@ -1,0 +1,232 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f9fc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e5e8ed;
+}
+
+.header h1 {
+  margin: 0;
+  color: #2c5aa0;
+  font-size: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d3dce6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.button:hover:not(:disabled) {
+  background: #f7f9fc;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveStatus {
+  font-size: 0.875rem;
+}
+
+.saving {
+  color: #f59e0b;
+}
+
+.saved {
+  color: #10b981;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  border-right: 1px solid #e5e8ed;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  color: #374151;
+}
+
+.availableComponents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  color: #374151;
+}
+
+.layoutArea {
+  min-height: 400px;
+  background: white;
+  border: 2px dashed #d3dce6;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.layoutArea.dragOver {
+  border-color: #2c5aa0;
+  background: #f0f4f8;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.componentCard {
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: grab;
+  transition: all 0.2s;
+}
+
+.componentCard:hover {
+  border-color: #2c5aa0;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.1);
+}
+
+.componentCard.dragging {
+  cursor: grabbing;
+  transform: rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.layoutComponent {
+  position: relative;
+  background: white;
+  border: 1px solid #e5e8ed;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.layoutComponent:hover {
+  border-color: #2c5aa0;
+}
+
+.layoutComponent.dragging {
+  transform: rotate(2deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dragHandle {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2c5aa0;
+  color: white;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: grab;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.removeButton:hover {
+  background: #dc2626;
+}
+
+.previewLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.previewContent h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.previewContent p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.heroPreview {
+  padding: 1rem;
+}
+
+.twoColumnPreview {
+  padding: 1rem;
+}
+
+.imageGridPreview {
+  padding: 1rem;
+}

@@ -1,0 +1,71 @@
+.imageGrid {
+  padding: 5rem 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  animation: fadeInScale 0.8s ease-out both;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+.fallbackImage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  animation: fadeInScale 0.8s ease-out both;
+}
+
+.imageWrapper:hover .fallbackImage {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .imageGrid {
+    padding: 3rem 0;
+  }
+}

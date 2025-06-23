@@ -1,0 +1,100 @@
+.demo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #e5e8ed;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  color: #2c5aa0;
+  font-size: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d3dce6;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.tab:hover {
+  background: #f7f9fc;
+}
+
+.tab.active {
+  background: #2c5aa0;
+  color: white;
+  border-color: #2c5aa0;
+}
+
+.builderContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.jsonContainer {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.jsonContainer h2 {
+  margin: 0 0 1rem 0;
+  color: #374151;
+}
+
+.jsonContainer p {
+  margin: 0 0 1rem 0;
+  color: #6b7280;
+}
+
+.jsonOutput {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.instructions {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e5e8ed;
+}
+
+.instructions h3 {
+  margin: 0 0 1rem 0;
+  color: #374151;
+}
+
+.instructions ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #6b7280;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+}

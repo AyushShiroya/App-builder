@@ -1,0 +1,182 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.link {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.link:hover,
+.link.active {
+  color: #2563eb;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+.highlight:hover {
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(102, 126, 234, 0);
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .link {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    height: 3.5rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .links {
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .highlight {
+    animation: none; /* Disable animation on mobile for performance */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+    height: 3rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .links {
+    gap: 0.25rem;
+  }
+
+  .link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .logo {
+    font-size: 0.9375rem;
+  }
+
+  .link {
+    padding: 0.25rem 0.375rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .container {
+    height: 3rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .nav {
+    border-bottom-width: 0.5px;
+  }
+}
